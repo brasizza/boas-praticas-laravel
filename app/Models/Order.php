@@ -26,9 +26,14 @@ class Order extends Model
         }
     }
 
-    public function getStatusPaidAttribute(){
+    public function getStatusPaidAttribute()
+    {
 
-        return $this->paid ? 'Pago':'Pendente';
+        return $this->paid ? 'Pago' : 'Pendente';
+    }
 
+    public function setTrackCodeAttribute($value){
+
+        $this->attributes['track_code'] = "#{$value}";
     }
 }

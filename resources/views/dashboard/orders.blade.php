@@ -3,7 +3,7 @@
 <a href="{{route('orders.index', ['status'=>'pending'])}}" class="btn btn-warning">Pedidos pendentes</a>
 <a href="{{route('orders.index',['status'=>'delivered'])}}" class="btn btn-primary">Pedidos enviados</a>
 <a href="{{route('orders.index',['paid'=>1])}}" class="btn btn-success">Pedidos pagos</a>
-<a href="{{route('orders.index')}}" class="btn btn-light">Pedidos pagos</a>
+<a href="{{route('orders.index')}}" class="btn btn-light">Limpar filtro</a>
 <table class="table table-hover">
     <thead>
         <th>#</th>

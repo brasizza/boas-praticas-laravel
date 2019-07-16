@@ -20,12 +20,35 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/collections', function () {
+    $fruits = collect([
+        'apple',
+        'pear',
+        'banana',
+        'straw'
+    ]);
+
+
+        $fruits = $fruits->reject(function($fr){
+           return $fr == 'straw';
+        });
+
+
+    dd($fruits);
+
+    return 'collections';
+});
+
 Route::group(['middleware' => ['auth'], 'prefix' => 'orders'], function () {
 
     Route::get('/', 'OrderController@index')
         ->name('orders.index');
     Route::get('/create', 'OrderController@create')
         ->name('orders.create');
+
+    Route::post('/create', 'OrderController@store')
+        ->name('orders.store');
+
 
 
 });

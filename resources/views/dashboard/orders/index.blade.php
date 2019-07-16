@@ -4,6 +4,8 @@
 <a href="{{route('orders.index',['status'=>'delivered'])}}" class="btn btn-primary">Pedidos enviados</a>
 <a href="{{route('orders.index',['paid'=>1])}}" class="btn btn-success">Pedidos pagos</a>
 <a href="{{route('orders.index')}}" class="btn btn-light">Limpar filtro</a>
+<hr>
+<a href="{{route('orders.create')}}" class="btn btn-primary">Novo</a>
 <table class="table table-hover">
     <thead>
         <th>#</th>

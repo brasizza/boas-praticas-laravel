@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 class Order extends Model
 {
 
-
+        protected $fillable = ['status', 'track_code'];
     protected static function boot()
     {
         parent::boot();
